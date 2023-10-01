@@ -482,3 +482,28 @@ footer a:hover {
     font-size: 1.5rem;
   }
 }
+
+/* Mobile Phone */
+@media (max-width: 360px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 5px;
+    margin: 3;
+    width: 70px;
+    height: 55px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 7rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
