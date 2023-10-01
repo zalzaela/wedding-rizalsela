@@ -378,6 +378,13 @@ footer a:hover {
   transform: rotateZ(180deg);
 }
 
+.anchor {
+  display: block;
+  height: 63px; /* this is the height of your header */
+  margin-top: -63px; /* this is again negative value of the height of your header */
+  visibility: hidden;
+}
+
 /* Media Query */
 /* Extra Large */
 @media (max-width: 1200px) {
@@ -455,6 +462,7 @@ footer a:hover {
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .sticky-top {
@@ -493,6 +501,7 @@ footer a:hover {
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .sticky-top {
@@ -531,6 +540,7 @@ footer a:hover {
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .sticky-top {
@@ -568,6 +578,7 @@ footer a:hover {
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
   }
 
   .sticky-top {
