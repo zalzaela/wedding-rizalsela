@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -22,26 +22,45 @@
     <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
     <script src="countdown/simplyCountdown.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section
       id="hero"
-      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+      class="hero w-100 h-100 p-3 mx-auto text-center d-flex flex-column justify-content-center align-items-center text-white"
     >
       <main>
-        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
-        <h1>Rizal & Sela</h1>
-        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="weddingof">
+          <h4>Pernikahan</h4>
+          <h1>Rizal & Sela</h1>
+          
+        <p>Akan melangsungkan pernikahan</p>
         <div class="simply-countdown"></div>
-        <a href="#udangan" class="btn btn-lg mt-4">Lihat Undangan</a>
+          <h4>Minggu, 12 November 2023</h4>
+        </div>
       </main>
+      <section class="openinvitation">
+        <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+        <h1><span></span></h1>
+      <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"
+          ></i>Buka Undangan</a
+        >
+      </section>
     </section>
 
-    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+    <nav
+      class="navbar navbar-expand-md bg-transparent sticky-top mynavbar"
+    >
       <div class="container">
         <a class="navbar-brand" href="#">Rise</a>
         <button
@@ -71,12 +90,10 @@
           </div>
           <div class="offcanvas-body">
             <div class="navbar-nav ms-auto">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#info">Info</a>
-              <a class="nav-link" href="#story">Story</a>
-              <a class="nav-link" href="#gallery">Gallery</a>
-              <a class="nav-link" href="#rsvp">RSVP</a>
-              <a class="nav-link" href="#gift">Gifts</a>
+              <a class="nav-link" href="#home"><span data-bs-dismiss="offcanvas">Home</span></a>
+              <a class="nav-link" href="#info"><span data-bs-dismiss="offcanvas">Info</span></a>
+              <a class="nav-link" href="#gallery"><span data-bs-dismiss="offcanvas">Gallery</span></a>
+              <a class="nav-link" href="#gifts"><span data-bs-dismiss="offcanvas">Gifts</span></a>
             </div>
           </div>
         </div>
@@ -109,10 +126,18 @@
                   inventore. Nesciunt enim quas inventore voluptatibus aperiam
                   ipsam assumenda.
                 </p>
-                <p>Putra dari Bpk. Yoyo <br> dan <br> Ibu Nina</p>
+                <p>
+                  Putra dari Bpk. Yoyo <br />
+                  dan <br />
+                  Ibu Nina
+                </p>
               </div>
               <div class="col-4">
-                <img src="img/rizal.jpg" alt="rizal" class="img-responsive rounded-circle">
+                <img
+                  src="img/rizal.jpg"
+                  alt="rizal"
+                  class="img-responsive rounded-circle"
+                />
               </div>
             </div>
           </div>
@@ -124,7 +149,11 @@
           <div class="col-lg-6">
             <div class="row">
               <div class="col-4">
-                <img src="img/sela.jpg" alt="rizal" class="img-responsive rounded-circle">
+                <img
+                  src="img/sela.jpg"
+                  alt="rizal"
+                  class="img-responsive rounded-circle"
+                />
               </div>
               <div class="col-8 text-end">
                 <h3>Mohammad Rizal Zaelani</h3>
@@ -135,7 +164,11 @@
                   inventore. Nesciunt enim quas inventore voluptatibus aperiam
                   ipsam assumenda.
                 </p>
-                <p>Putra dari Bpk. Hasimal <br> dan <br> Ibu Desi</p>
+                <p>
+                  Putra dari Bpk. Hasimal <br />
+                  dan <br />
+                  Ibu Desi
+                </p>
               </div>
             </div>
           </div>
@@ -143,25 +176,357 @@
       </div>
     </section>
 
+    <section class="our-wedding" id="ourWedding">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col10 text-center">
+            <h2>Pernikahan</h2>
+            <h3 class="mb-5">kami</h3>
+            <p>
+              Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/I untuk menghadiri acara pernikahan kami.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/rizal.jpg" alt="" />
+              </div>
+              <div class="slide">
+                <img src="img/sela.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info" id="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat">
+              Alamat: Gedung Muara Experimental Farm <br />
+              Jl. Kapten No.12, Pasir Jaya, Kec. Bogor Barat, Kota Bogor
+            </p>
+            <a
+              href="https://maps.app.goo.gl/uueGEGxdSfGGqCUFA"
+              target="_blank"
+              class="btn btn-light -btn-sm my-3"
+              >Klik untuk membuka peta</a
+            >
+            <p class="description">
+              Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di
+              tujuan namun tidak ada tanda-tanda sedang dilangsungkan
+              pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light mb-5">
+              <div class="card-header">Akad Nikah</div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock"></i>
+                    <span>08.00 - 10.00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Minggu, 12 November 2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk menjaga kekhidmatan dan
+                kekhusyuan seluruh proses.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light">
+              <div class="card-header">Resepsi</div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock"></i>
+                    <span>11.00 - selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3"></i>
+                    <span>Minggu, 12 November 2023</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk menjaga kekhidmatan dan
+                kekhusyuan seluruh proses.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col10 text-center">
+            <span>Memori Kisah Kami</span>
+            <h2>Galeri Foto</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div
+          class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
+        >
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 01"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 01"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 02"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 02"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 03"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 03"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 04"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 04"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 05"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 05"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/gallery01.png"
+              data-toggle="lightbox"
+              data-caption="gallery 06"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/gallery01.jpg"
+                alt="gallery 06"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gifts" id="gifts">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center gifts-button">
+            <span>ungkapan tanda kasih</span>
+            <h2>Kirim Hadiah</h2>
+            <p>
+              Doa restu anda merupakan karunia yang sangat berarti bagi kami, dan jika memberi adalah ungkapan tanda kasih anda, anda dapat memberi kado secara cashless.
+            </p>
+            <a class="btn" data-bs-toggle="collapse" href="#giftsBody" role="button" aria-expanded="false" aria-controls="giftsBody"><i class="bi bi-gift-fill"></i>Wedding Gift</a>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6">
+            <ul class="list-group gifts-body collapse" id="giftsBody">
+              <li class="list-group-item">
+                <div class="fw-bold">BCA</div>
+                
+                <img src="img/logo_bca.png" alt="Logo Bank BCA" class="img-thumbnail m-2" width="150">
+                <div class="fw-medium">No. Rekening</div>
+                <div class="fw-bold nomor-rekening">123456789</div>
+                <a class="btn copy-rekening"><i class="bi bi-copy"></i>Copy Nomor Rekening</a>
+                <div class="fw-bold">an. Sela Akmaprianti</div>
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">Saweria</div>
+                <img
+                  src="img/saweria.png"
+                  alt="Saweria QR"
+                  class="img-thumbnail mb-2"
+                  width="150"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clossing" id="clossing">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col10 text-center">
+            <h2 class="mb-5">Rizal & Sela</h2>
+            <p>
+              Atas kehadiran dan doa restunya kami ucapkan terimakasih.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/bg01.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="img/bg01.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="img/bg01.jpg" class="d-block w-100" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small class="block"
+              >&copy; 2023 | Rise Wedding. All Rights Reserved.</small
+            >
+            <small class="block"
+              >Design by
+              <a href="https://www.instagram.com/zalzaela/">@zalzaela</a>
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/audio.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      simplyCountdown(".simply-countdown", {
-        year: 2023, // required
-        month: 11, // required
-        day: 12, // required
-        hours: 8, // Default is 0 [0-23] integer
-        words: {
-          days: { singular: "hari", plural: "hari" },
-          hours: { singular: "jam", plural: "jam" },
-          minutes: { singular: "menit", plural: "menit" },
-          seconds: { singular: "detik", plural: "detik" },
-        },
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="js/my_countdown.js"></script>
+    <script src="js/my_offcanvas.js"></script>
+    <script src="js/onload.js"></script>
+    <script src="js/my_urlparams.js"></script>
+    <script src="js/action_save_wishes.js"></script>
   </body>
 </html>

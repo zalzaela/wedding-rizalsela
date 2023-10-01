@@ -1,5 +1,6 @@
 :root {
-  --pink: #f14e95;
+  --bg: #000;
+  --primary: #795548;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
@@ -18,7 +19,7 @@ body {
   height: 100%;
   background-image: url(img/bg01.jpg);
   z-index: -1;
-  filter: grayscale(50%);
+  filter: grayscale(70%);
   background-size: cover;
   background-position: center;
 }
@@ -26,12 +27,11 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
-  background-color: var(--bg);
 }
 
 .hero h1,
 .hero h4,
-hero p {
+.hero p {
   text-shadow: var(--shadow);
 }
 
@@ -49,14 +49,23 @@ hero p {
 }
 
 .hero a {
-  color: var(--pink);
+  color: var(--primary);
   background-color: white;
   box-shadow: var(--shadow);
 }
 
 .hero a:hover {
-  background-color: var(--pink);
+  background-color: var(--primary);
   color: white;
+}
+
+.openinvitation h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 3.3rem;
+}
+
+.openinvitation {
+  margin-top: 8rem;
 }
 
 .mynavbar {
@@ -88,8 +97,13 @@ hero p {
   padding-bottom: 5rem;
 }
 
-.home h2 {
-  color: var(--pink);
+.home h2,
+.info h2,
+.gallery h2,
+.gifts h2,
+.clossing h2,
+.our-wedding h2 {
+  color: var(--primary);
   font-family: "Sacramento";
   font-size: 5rem;
   font-weight: bold;
@@ -113,7 +127,7 @@ hero p {
 .home .couple h3 {
   font-family: "Sacramento";
   font-size: 2.4rem;
-  color: var(--pink);
+  color: var(--primary);
 }
 
 .home .couple img {
@@ -134,7 +148,234 @@ hero p {
 
 .home .heart i {
   margin: auto;
-  color: var(--pink);
+  color: var(--primary);
+}
+
+.info {
+  background-color: var(--bg);
+  color: white;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+}
+
+.info .alamat {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.info p {
+  margin-bottom: 1.5rem;
+}
+
+.info .description {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.info .card {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid #999;
+}
+
+.info .card-header {
+  border-bottom: 1px solid #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.info .card-body {
+  font-size: 1rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.our-wedding {
+  padding-top: 3rem;
+}
+
+.gallery,
+.gifts {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+}
+
+.gallery span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gallery p,
+.gifts p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.gifts {
+  background-color: var(--bg);
+}
+
+.gifts h2 {
+  font-size: 4.5rem;
+}
+
+.gifts p {
+  color: white;
+}
+
+.gifts span {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gifts-body a,
+.gifts-button a {
+  font-size: 0.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  margin: 0.5rem;
+}
+
+.gifts-body a i,
+.gifts-button a i {
+  font-size: 0.6rem;
+  margin-right: 0.3rem;
+}
+
+.gifts-body a:hover,
+.gifts-button a:hover {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--primary);
+  color: white;
+}
+
+footer a {
+  color: var(--bg);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slider {
+  height: 350px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(350px * 18);
+  animation: scroll 60s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 9));
+  }
+}
+
+.slide {
+  height: 350px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 1%;
+}
+
+.slide img:hover {
+  transform: translateZ(20px);
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
 }
 
 /* Media Query */
@@ -145,6 +386,15 @@ hero p {
   }
 }
 
+.clossing {
+  padding-top: 3rem;
+}
+
+#myCarousel {
+  height: 100%;
+  width: 100%;
+}
+
 /* Laptop */
 @media (max-width: 992px) {
   html {
@@ -152,7 +402,21 @@ hero p {
   }
 
   .simply-countdown > .simply-section {
-    padding: 70px;
+    padding: 10px;
+    margin: 5px;
+    width: 120px;
+    height: 70px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.6rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
   }
 
   .home .heart {
@@ -167,13 +431,30 @@ hero p {
   }
 
   .simply-countdown > .simply-section {
-    padding: 60px;
+    padding: 10px;
     margin: 5px;
+    width: 120px;
+    height: 70px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.6rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
   }
 
   .mynavbar .nav-link {
     font-size: 2rem;
     text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
   }
 }
 
@@ -184,7 +465,20 @@ hero p {
   }
 
   .simply-countdown > .simply-section {
-    padding: 45px;
+    padding: 5px;
     margin: 3;
+    width: 90px;
+    height: 55px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 7rem;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
