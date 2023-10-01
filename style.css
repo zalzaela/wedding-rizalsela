@@ -437,10 +437,6 @@ footer a:hover {
     font-size: 65%;
   }
 
-  body {
-    padding-right: 0 !important;
-  }
-
   .simply-countdown > .simply-section {
     padding: 10px;
     margin: 5px;
@@ -458,26 +454,12 @@ footer a:hover {
     text-align: center;
     font-size: 1.5rem;
   }
-
-  .mynavbar .nav-link {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .sticky-top {
-    overflow: hidden;
-  }
 }
 
 /* Mobile Phone */
 @media (max-width: 576px) {
   html {
     font-size: 60%;
-  }
-
-  body {
-    padding-right: 0 !important;
   }
 
   .simply-countdown > .simply-section {
@@ -496,92 +478,5 @@ footer a:hover {
     display: block;
     text-align: center;
     font-size: 1.5rem;
-  }
-
-  .mynavbar .nav-link {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .sticky-top {
-    overflow: hidden;
-  }
-}
-
-/* Mobile Phone */
-@media (max-width: 419px) {
-  html {
-    font-size: 60%;
-  }
-
-  body {
-    padding-right: 0 !important;
-  }
-
-  .simply-countdown > .simply-section {
-    padding: 5px;
-    margin: 3;
-    width: 70px;
-    height: 55px;
-  }
-
-  .simply-countdown > .simply-section .simply-amount {
-    font-size: 7rem;
-  }
-
-  .simply-countdown > .simply-section .simply-amount,
-  .simply-countdown > .simply-section .simply-word {
-    display: block;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .mynavbar .nav-link {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .sticky-top {
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 339px) {
-  html {
-    font-size: 60%;
-  }
-
-  body {
-    padding-right: 0 !important;
-  }
-
-  .simply-countdown > .simply-section {
-    padding: 5px;
-    margin: 3;
-    width: 50px;
-    height: 55px;
-  }
-
-  .simply-countdown > .simply-section .simply-amount {
-    font-size: 5rem;
-  }
-
-  .simply-countdown > .simply-section .simply-amount,
-  .simply-countdown > .simply-section .simply-word {
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .mynavbar .nav-link {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .sticky-top {
-    overflow: hidden;
   }
 }

@@ -23,7 +23,6 @@ function enableScroll() {
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
   document.body.style.overflow = "visible";
-  document.body.style.padding = "0px";
   openinvitation.style.display = "none";
 
   playAudio();
